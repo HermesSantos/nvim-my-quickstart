@@ -66,6 +66,9 @@ require('lazy').setup({
   'xiyaowong/transparent.nvim',
   'APZelos/blamer.nvim',
 
+  -- Buffer plugins
+  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -127,10 +130,10 @@ require('lazy').setup({
   },
 
   {
-    'folke/tokyonight.nvim',
+    'rose-pine/neovim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'tokyonight'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
@@ -200,6 +203,9 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
+vim.opt.termguicolors = true
+require("bufferline").setup{}
 
 -- Set highlight on search
 vim.o.hlsearch = false
