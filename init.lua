@@ -131,12 +131,12 @@ require('lazy').setup({
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin",
+			colorscheme = "kanagawa",
 		},
 	},
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"rebelot/kanagawa.nvim",
+		name = "kanagawa",
 		opts = {
 			term_colors = true,
 			transparent_background = false,
@@ -239,6 +239,9 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- No wrapp 
+vim.wo.wrap = false
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
@@ -281,9 +284,12 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set('n', '<C-h>', ":bprevious<CR>", { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', ":bnext<CR>", { noremap = true, silent = true })
+
+-- Undo with cappital 'u'
 vim.keymap.set('n', 'U', "<C-r>", { noremap = true, silent = true })
-vim.keymap.set('n', '<S-r>', "viwp", { noremap = true, silent = true })
-vim.keymap.set('n', '<S-y>', "yiw", { noremap = true, silent = true })
+vim.keymap.set('n', 'R', "viwp", { noremap = true, silent = true })
+vim.keymap.set('n', 'Y', "yiw", { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>', ":bd<CR>", { noremap = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
