@@ -131,12 +131,13 @@ require('lazy').setup({
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "kanagawa",
+			colorscheme = "tokyonight",
 		},
 	},
 	{
-		"rebelot/kanagawa.nvim",
-		name = "kanagawa",
+		--"rebelot/kanagawa.nvim",
+    "folke/tokyonight.nvim",
+		name = "tokyonight",
 		opts = {
 			term_colors = true,
 			transparent_background = false,
