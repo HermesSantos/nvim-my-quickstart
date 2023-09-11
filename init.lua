@@ -257,6 +257,10 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('n', '<C-h>', ":bprevious<CR>", { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', ":bnext<CR>", { noremap = true, silent = true })
 
+-- Remap to centerlize when use the C-d and C-u
+vim.keymap.set('n', '<C-d>', "<C-d>zz", { noremap = true, silent = true })
+vim.keymap.set('n', '<C-u>', "<C-u>zz", { noremap = true, silent = true })
+
 vim.keymap.set('n', '<C-g>', ":Gitsigns toggle_current_line_blame<CR>", { noremap = true, silent = true })
 
 -- Remap to close bufffer
